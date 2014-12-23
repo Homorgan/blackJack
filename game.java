@@ -32,7 +32,7 @@ public class game {
 	System.out.println("You hand is worth: " + playerHand);
 	System.out.println("The Dealer's up card is worth: " + playingCards.cardValue(dealerDeck.get(0)));
 //	} while(true)
-	if((playerHand==21) && (dealerHand==21)){
+	if((playingCards.blackjackCheck(playerHand)) && (playingCards.blackjackCheck(dealerHand))){
 		System.out.println("Both hands are 21 and neither wins...");
 		break;
 	}
