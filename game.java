@@ -36,11 +36,11 @@ public class game {
 		System.out.println("Both hands are 21 and neither wins...");
 		break;
 	}
-	else if ((dealerHand==21) && (playerHand<21)){
+	else if (playingCards.blackjackCheck(dealerHand) && (playerHand<21)){
 		System.out.println("The Dealer has 21 and you do not...");
 		break;
 	}
-	else if((playerHand==21) && (dealerHand<21)){
+	else if(playingCards.blackjackCheck(playerHand) && (dealerHand<21)){
 		System.out.println("You have a 21 and the dealer does not...");
 		break;
 	}
