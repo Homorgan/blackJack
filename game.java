@@ -18,8 +18,8 @@ public class game {
 		playerDeck.add(playingCards.dealtCard());
 		dealerDeck.add(playingCards.dealtCard());
 	}
-	System.out.println(playerDeck);
-	System.out.println(dealerDeck.get(0));
+//	System.out.println(playerDeck);
+//	System.out.println(dealerDeck.get(0));
 //	System.out.println(playingCards.cardsLeft());
 	int playerHand = 0;
 	int dealerHand = 0;
@@ -27,8 +27,8 @@ public class game {
 		playerHand = playerHand + playingCards.cardValue(playerDeck.get(i));
 		dealerHand = dealerHand + playingCards.cardValue(dealerDeck.get(i));
 	}
-	System.out.println("You hand is worth: " + playerHand);
-	System.out.println("The Dealer's up card is worth: " + playingCards.cardValue(dealerDeck.get(0)));
+//	System.out.println("You hand is worth: " + playerHand);
+//	System.out.println("The Dealer's up card is worth: " + playingCards.cardValue(dealerDeck.get(0)));
 //	} while(true)
 	if((playingCards.blackjackCheck(playerHand)) && (playingCards.blackjackCheck(dealerHand))){
 		System.out.println("Both hands are 21 and neither wins...");
@@ -49,21 +49,21 @@ public class game {
 
 	while (winner) {
 		if ((dealerTop < 7) && (playerHand < 12)) {
-			System.out.println("Player");
+//			System.out.println("Player");
 			playerDeck.add(playingCards.dealtCard());
 			playerHand = 0;
 			for (int i = 0; i < playerDeck.size(); i ++) {
 				playerHand = playerHand + playingCards.cardValue(playerDeck.get(i)); }
-			System.out.println(playerDeck);
+//			System.out.println(playerDeck);
 					}
 		if (((dealerTop+10) > playerHand) && ((dealerTop+10) > 16)) {
-			System.out.println("Player");
+//			System.out.println("Player");
 			while ((playerHand<17) && (winner)){
 				playerDeck.add(playingCards.dealtCard());
 				playerHand = 0;
 				for (int i = 0; i < playerDeck.size(); i ++) {
 					playerHand = playerHand + playingCards.cardValue(playerDeck.get(i)); }
-				System.out.println(playerDeck);
+//				System.out.println(playerDeck);
 				if (playerHand > 21) {
 					winner = false;
 					win = "Dealer";
@@ -71,12 +71,12 @@ public class game {
 			}
 			}
 		while((dealerHand<17) && (winner)) {
-			System.out.println("Dealer turn");
+//			System.out.println("Dealer turn");
 			dealerDeck.add(playingCards.dealtCard());
 			dealerHand = 0;
 			for (int i = 0; i < dealerDeck.size(); i ++) {
 			dealerHand = dealerHand + playingCards.cardValue(dealerDeck.get(i)); }
-			System.out.println(dealerDeck);
+//			System.out.println(dealerDeck);
 			if (dealerHand > 21) {
 				winner = false;
 				win = "Player";
