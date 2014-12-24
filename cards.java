@@ -35,7 +35,7 @@ public class cards {
 		return cardType;
 	}
 	static String dealtCard() {
-		int cardOne = (int)((Math.random()*cardDeck.size())+1);
+		int cardOne = (int)((Math.random()*cardDeck.size()));
 		String dealtCard = cardDeck.get(cardOne);
 		cardDeck.remove(cardOne);
 		return dealtCard;
